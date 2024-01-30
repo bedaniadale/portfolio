@@ -10,6 +10,7 @@ const hero = document.querySelector(".hero")
 const cv = document.querySelector(".cv").style
 const cv2 = document.querySelector(".cv")
 const works = document.querySelector(".works")
+const contact = document.querySelector("contact")
 
 //text elements
 const cursorSpan = document.querySelector(".cursorspan")
@@ -76,13 +77,13 @@ function hideCv() {
     cursor.style.left = '50%'
 
     //set cursor
+    cursor.style.top = '93%'
+    cursor.style.width = '40px'; 
+    cursor.style.height = '40px'; 
     cursor.style.backgroundColor = 'var(--bgprimary)';
     cursor.style.color = 'white';
-    cursor.style.display = 'none'
-
-
+    cursor.style.display = 'none';
 }   
-
 
 
 function showHeader() { 
@@ -148,10 +149,7 @@ cursor.addEventListener("click",()=> {
         case "cv" : 
             hideCv();
             break;
-
         
-        
-
     }
 })
 
@@ -168,3 +166,6 @@ backtotop.addEventListener("click",() =>{
 
     }
 })
+
+
+///left animation 

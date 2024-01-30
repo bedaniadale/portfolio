@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "styles/style.css"/> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel = "stylesheet" href = "styles/mobile.css"/> 
+    <link rel="icon" type="image/x-icon" href="assets/icon.png">
+    <link rel = "stylesheet" href = "styles/about.css"/> 
+
+    <style> 
+    @import url(styles/global.css);
+    
+    .container { 
+        width: 100%; 
+        height: 100%;
+        background-color: var(--bgprimary);
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wrapper { 
+        width: 55%; 
+        height: 85%; 
+        
+        display: grid; 
+        grid-template-rows: 20% 70% 10%;
+        grid-template-columns: 100%;
+    }
+
+    .img, .txt, .txt2 { 
+        width: 100%; 
+        height: 100%;
+    }
+
+    .img { 
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .txt { 
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img img { 
+        border-radius: 75px;
+        width: 45%;
+        height: 95%;
+    }
+
+    h1 { 
+        font-size: 3rem;
+        font-weight: 900;
+    }
+
+
+    .txt2 { 
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        text-align: justify;
+        line-height: 1.5rem;
+      
+        background-color: var(--textprimary);
+        color: var(--bgprimary);
+        border-radius: 15px;
+    }
+
+    p { 
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+        font-weight: 500
+    }
+
+    a {  
+        text-decoration: none;
+        background-color: white;
+        color: var(--bgprimary);
+        font-weight: 800;
+        padding: 0.5rem 2rem;
+        border-radius: 15px;
+        transition: 300ms; 
+    }
+
+    a:hover { 
+        transform: scale(1.03);
+    }
+
+    body { 
+        color: var(--textprimary)
+    }
+    </style> 
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="wrapper">
+            <!-- <div class="img">
+                <img src = "assets/uc.gif"/> 
+            </div> -->
+
+            <div class="txt">
+                <h1> 🚧 Work in Progress 🚧</h1>
+            </div>
+
+            <div class="txt2">
+                <p>Hey there!<br><br>
+
+                    Thanks for stopping by my digital space. I'm currently tinkering away to make this place even more reflective of who I am and what I do.<br><br>
+                    
+                    The construction tools are out, and the creative chaos is in full swing. It won't be long before you get a front-row seat to the revamped showcase of my passion projects and journey.<br><br>
+                    
+                    I appreciate your patience and can't wait to share the finished product with you. In the meantime, feel free to connect with me on social media to catch glimpses of the behind-the-scenes action.<br><br>
+                    
+                    See you on the other side of the construction zone! </p>
+            </div>
+
+            <div class="img">
+                <a href = 'index.html'> ← BACK TO HOME </a>
+            </div>
+        </div>
+        
+        
+    </div>
+</body>
+</html>

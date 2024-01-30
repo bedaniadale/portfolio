@@ -1,0 +1,29 @@
+
+
+:root { 
+    --bgprimary: #a84538; 
+    --textprimary: #e4dfbf;
+     --black: #0e0e0f;
+    
+     --pbar-light: #f07f6b; 
+     --pbar-dark: #b03524;
+
+}
+*{ 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+body { 
+    background-color: var(--textprimary);
+    font-family: 'Poppins', sans-serif;
+
+    width: 100%; 
+    height: 100vh;
+    overflow: hidden;
+}
