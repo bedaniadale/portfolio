@@ -16,6 +16,7 @@ const contact = document.querySelector("contact")
 const cursorSpan = document.querySelector(".cursorspan")
 const hoveredpage = document.querySelector("#currdiv")
 const reminder = document.querySelector(".reminder")
+const homebutton = document.querySelector(".hc") 
 
 // cursor.addEventListener("click",()=> { 
 //     let current_arrow = document.querySelector("#header_cursor_arrow")
@@ -47,6 +48,7 @@ function hideHeader() {
     cursor.style.color = 'white';
     cursorSpan.style.fontSize = '10rem';
     reminder.style.display = 'None';
+    homebutton.style.display = 'flex'
 }
 
 
@@ -101,6 +103,7 @@ function showHeader() {
     cursorSpan.style.fontSize = '2rem';
 
     hero.style.position = 'static'
+    homebutton.style.display = 'none'
 }
 function showHero(){
     hero.style.height = '100%'; 
@@ -168,4 +171,9 @@ backtotop.addEventListener("click",() =>{
 })
 
 
-///left animation 
+///home button animation 
+homebutton.addEventListener("click",()=> { 
+    showCv(); 
+    showHero();
+    showHeader(); 
+})
