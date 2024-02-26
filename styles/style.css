@@ -80,6 +80,25 @@ body {
     align-items: center;
 }
 
+.heartstatus { 
+    display: none;
+}
+
+
+.heart { 
+    width: 100%; 
+    height: 100%; 
+    position: absolute;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    top: 25%;
+    transition: 300ms;
+}
+
+
+
 /**** DIVS OVERFLOW */
 
 .header, .hero { 
@@ -91,6 +110,7 @@ body {
 }
 
 .header-text { 
+    z-index: 3; 
     width: 50% ;
     height: 40%; 
     display: grid; 
@@ -101,6 +121,7 @@ body {
 }
 
 .header-text h3 { 
+    text-shadow: 1px 5px rgb(0,0,0,0.3);
     font-size: 4rem;
     color: var(--textprimary);
 
@@ -110,6 +131,7 @@ body {
     
 }
 .header-text h4 { 
+    text-shadow: 1px 5px rgb(0,0,0,0.3);
     font-size: 2rem;
     color: var(--textprimary);
   
@@ -123,6 +145,7 @@ body {
 }
 
 .header-text h1 { 
+    text-shadow: 5px 2px rgb(0,0,0,0.7);
     animation: fadeIn 2.9s ease;
    
  
@@ -825,3 +848,21 @@ body {
     cursor: pointer
    
 }
+
+
+.marquee {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    
+}
+.marquee h1 {
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    font-size: 3em;
+}
+
+

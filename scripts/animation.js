@@ -1,6 +1,10 @@
 //buttons
 const cursor = document.querySelector("#header_cursor")
 const backtotop = document.querySelector(".btp"); 
+//animation for hand 
+
+const heart = document.querySelector(".heart") 
+
 
 
 
@@ -49,6 +53,7 @@ function hideHeader() {
     cursorSpan.style.fontSize = '10rem';
     reminder.style.display = 'None';
     homebutton.style.display = 'flex'
+    heart.style.top = '125%';
 }
 
 
@@ -104,6 +109,9 @@ function showHeader() {
 
     hero.style.position = 'static'
     homebutton.style.display = 'none'
+    setTimeout(function() {
+        heart.style.top = '25%';
+    }, 500); // 1000 milliseconds = 1 second
 }
 function showHero(){
     hero.style.height = '100%'; 
@@ -177,3 +185,7 @@ homebutton.addEventListener("click",()=> {
     showHero();
     showHeader(); 
 })
+
+
+
+
