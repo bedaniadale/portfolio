@@ -1,0 +1,23 @@
+
+.backbtn { 
+    width: 15%;
+    top: 2%;
+    left: 40%;
+    height: 5%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    position: absolute;
+    z-index: 20;
+
+    
+    background-color: var(--textprimary);
+    border-radius: 35px;
+    transition: 300ms;
+
+}
+
+.backbtn:hover { 
+    transform: scale(1.03)
+}

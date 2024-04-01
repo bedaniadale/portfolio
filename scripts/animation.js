@@ -21,7 +21,15 @@ const cursorSpan = document.querySelector(".cursorspan")
 const hoveredpage = document.querySelector("#currdiv")
 const reminder = document.querySelector(".reminder")
 const homebutton = document.querySelector(".hc") 
+const musicbutton = document.querySelector(".music-player")
+const musiclabel = document.querySelector(".music-player-label")
 
+
+//audio 
+const audio = document.querySelector("#audio")
+const music_icon = document.querySelector(".music")
+const music_popup = document.querySelector(".music-player-popup")
+const mpp = document.querySelector(".mpp")
 // cursor.addEventListener("click",()=> { 
 //     let current_arrow = document.querySelector("#header_cursor_arrow")
 //     if(current_arrow.innerHTML == 'keyboard_arrow_down') { 
@@ -53,6 +61,11 @@ function hideHeader() {
     cursorSpan.style.fontSize = '10rem';
     reminder.style.display = 'None';
     homebutton.style.display = 'flex'
+    musicbutton.style.display = 'flex';
+    if(music_icon.innerHTML == 'music_note') { 
+        musiclabel.style.display = 'flex';
+    }
+
     heart.style.top = '125%';
 }
 
@@ -109,6 +122,8 @@ function showHeader() {
 
     hero.style.position = 'static'
     homebutton.style.display = 'none'
+    musicbutton.style.display = 'none';
+    musiclabel.style.display = 'none';
     setTimeout(function() {
         heart.style.top = '25%';
     }, 500); // 1000 milliseconds = 1 second
@@ -189,3 +204,28 @@ homebutton.addEventListener("click",()=> {
 
 
 
+musicbutton.addEventListener("click",()=> { 
+    if(music_icon.innerHTML == 'music_note') { 
+        audio.play();
+        musiclabel.style.display = 'None';
+        music_icon.innerHTML = "volume_up"
+        music_popup.style.top = '0%'
+        setTimeout(()=>{ 
+            mpp.style.opacity = '0.2';
+        }, 2000)
+        
+    }else if (music_icon.innerHTML == "volume_up"){  
+        music_icon.innerHTML= 'volume_off'; 
+        music_popup.style.top = '-10%'
+        mpp.style.opacity = '1';
+        audio.pause() 
+    } else { 
+        music_icon.innerHTML = 'volume_up'; 
+        audio.play(); 
+        music_popup.style.top = '0%'
+        setTimeout(()=>{ 
+            mpp.style.opacity = '0.2';
+        }, 2000)
+    }
+     
+}) 
